@@ -137,7 +137,40 @@ function esBisiesto(anyo){
 
     }
 
+alert("Ejercicio 9")
+// ejercicio 9 
+let base = parseFloat(prompt("Introduce un numero"))
+let altura = parseFloat(prompt("Introduce un numero"))
+let resultadoRect =parseFloat(perimetroRectangulo(base, altura))
+console.log(`El perimetro de un rectangulo es ${resultadoRect}`)
+function perimetroRectangulo(base , altura){
+    return 2*(base*altura)
+}
 
+alert("Ejercicio 10")
 
+// Ejercicio 10
+let numPrimo = parseInt(prompt("Introduce un numero para saber si es primo o no "))
+if (numPrimo>1 && numPrimo<=10000){
+    esPrimo(numPrimo)
+}else{
+    console.log("El numero no esta en el rango")
+}
+
+function esPrimo(n){
+    if (n < 2){
+        return false
+    }
+    for(let i=2;i<n;i++){
+        if(n%i===0){
+            return false
+        }
+        
+    }
+    return true
+}
+
+alert("Ejercicio 11")
+// Ejercicio 11
 
 
