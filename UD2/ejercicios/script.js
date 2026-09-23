@@ -170,7 +170,6 @@ function esPrimo(n){
     return true
 }
 
-alert("Ejercicio 11")
-// Ejercicio 11
+
 
 
