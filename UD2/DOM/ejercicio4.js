@@ -1,11 +1,16 @@
 let arrayInput = document.querySelectorAll(".texto")
 let arrayDiv = document.querySelectorAll(".textoMostrar")
+
 let aceptar = document.getElementById("aceptar").addEventListener("click" , ()=>{
+    
     arrayInput.forEach((e , i) =>{
+        
         if (arrayDiv[i]) {
             let parrafo = document.createElement("p");
-            parrafo.textContent = e.value; 
-            console.log(e)
+            parrafo.innerHTML = e.value; 
+            parrafo.addEventListener("click" , function(){
+                this.remove()
+            })
 
             if(e.value !== ""){
                 arrayDiv[i].style.color = "green"
@@ -15,6 +20,8 @@ let aceptar = document.getElementById("aceptar").addEventListener("click" , ()=>
             }
 
             arrayDiv[i].appendChild(parrafo);
+           
         }
     })
 })
+
