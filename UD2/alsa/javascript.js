@@ -24,9 +24,12 @@ let botonCambiar = document.getElementById("swapButton").addEventListener("click
 
 checkbox.addEventListener("click", ()=>{
     if(checkbox.checked){
-    inputVuelta.setAttribute("hidden" , "")   
+    inputVuelta.setAttribute("disabled" , "")
+    inputVuelta.value="dd/mm/yyyy"
+
     }else{
-         inputVuelta.removeAttribute("hidden")
+         inputVuelta.removeAttribute("disabled")
+          inputVuelta.value("dd/mm/yyyy")
     }
     })
      
