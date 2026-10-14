@@ -12,7 +12,7 @@ let resultadoVuelta = document.getElementById("resDestino")
 let resultadoFechaIda = document.getElementById("resFechaIda")
 let resultadoFechaVuelta = document.getElementById("resFechaVuelta")
 let resultadoSoloIda = document.getElementById("resSoloIda")
-
+let fecha = new Date()
 
 let botonCambiar = document.getElementById("swapButton").addEventListener("click", ()=>{
     let aux = origen.value
@@ -24,9 +24,9 @@ let botonCambiar = document.getElementById("swapButton").addEventListener("click
 
 checkbox.addEventListener("click", ()=>{
     if(checkbox.checked){
-    inputVuelta.setAttribute("hidden" , "")   
+    inputVuelta.setAttribute("disabled" ,"on")   
     }else{
-         inputVuelta.removeAttribute("hidden")
+         inputVuelta.removeAttribute("disabled" , "off")
     }
     })
      
@@ -35,41 +35,34 @@ checkbox.addEventListener("click", ()=>{
 let botonBuscar = document.getElementById("idBuscar").addEventListener("click" , (e)=>{
    e.preventDefault()
     
-    let fecha = new Date()
-    if (origen === "" || destino ==="" || origen.value === destino.value){
+    
+    if (origen.value=== "" || destino.value ==="" || origen.value === destino.value){
         
-        alert("Los valores tienen que estar rellenos de origen y destino")
-    }else if(inputIda.value > fecha.getDay){
+        alert("Los valores tienen que estar rellenos de origen y destino o ser diferentes")
+        
+
+    }else if(inputIda.value > `${fecha.getFullYear()}-${fecha.getMonth()}-${fecha.getDate()}`){
+       console.log("2. No entro")
        
-       alert("La fecha tiene que estar antes que el dia actual")
-    }else if(inputIda.value > inputVuelta.value ){
-       
-         alert("La fecha de ida no puede ser despues de la de destino ")
+
+    }else  if(!checkbox.checked && inputIda.value > inputVuelta.value) {
+           
+            alert("La fecha de vuelta no puede ser antes a la de ida ")
     }else{
-        
-        resultadoOrigen.innerHTML = `${origen.value}`
-        resultadoVuelta.innerHTML = `${destino.value}`
-        resultadoFechaIda.innerHTML = `${inputIda.value}`
-        
-        if(checkbox.checked){
-            resultadoFechaVuelta.setAttribute("hidden" , "")
-            resultadoSoloIda.innerHTML = "Si"
-        }else{
-            resultadoFechaVuelta.innerHTML = `${inputVuelta.value}`
-            resultadoFechaVuelta.removeAttribute("hidden")
-        }
-        
-        
+           resultadoOrigen.innerHTML = origen.value;
+    resultadoVuelta.innerHTML = destino.value;
+    resultadoFechaIda.innerHTML = inputIda.value;
+
+   
+    if (checkbox.checked) {
+        resultadoSoloIda.innerHTML = "Sí";
+        resultadoFechaVuelta.hidden = true; 
+    } else {
+        resultadoSoloIda.innerHTML = "No";
+        resultadoFechaVuelta.innerHTML = inputVuelta.value;
+        resultadoFechaVuelta.hidden = false; 
     }
-
-    
-    
-
-
-
-    
-
-    
+    }
     
 
 
