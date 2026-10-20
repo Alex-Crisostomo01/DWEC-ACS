@@ -1,0 +1,64 @@
+/* Estilos generales y fondo inicial blanco */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff; /* Fondo inicial blanco requerido */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.4s ease; /* Transición suave al cambiar de color */
+}
+
+/* Tarjeta contenedora para que se vea bonito */
+.contenedor {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 450px;
+    border: 1px solid #e0e0e0;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo del botón */
+.boton {
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    background-color: #f1f1f1;
+    border: 2px solid #333;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.boton:hover {
+    background-color: #e2e2e2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.boton:active {
+    transform: translateY(0);
+}
+
+/* Texto de ayuda */
+.instrucciones {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
