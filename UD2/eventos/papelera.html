@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio papelera</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #f0f0f0;
+    }
+    img {
+      width: 300px;
+    }
+    #papel{
+        position: absolute;
+    }
+  </style>
+  <script src="papelera.js" defer></script>
+</head>
+<body>
+  <img id="papel" src="papel.png" alt="Papel arrugado">
+  <img id="papelera" src="papelera.jpg" alt="Papelera">
+  <img src="llena.jpg" alt="Papelera llena" id="papeleraLlena" style="display: none;">
+
+  <button id="reiniciar" style="display: none;">Reiniciar</button>
+
+</body>
+</html>
