@@ -1,10 +1,12 @@
-let numProductos = 0
-let precioProductos = 0
+let listaCompra = [];
 let seleccion = document.getElementById("productSelect")
 let listaProductos = document.getElementById("productoList")
 let totalProductos = document.getElementById("totalProductos")
 let totalPrecio = document.getElementById("importeTotal")
+const estadisticas = new Map();
 
+estadisticas.set("total-unidades" , 0)
+estadisticas.set("total-precio" , 0)
 
 fetch("productos.json")
     .then((response) => {
@@ -33,17 +35,22 @@ fetch("productos.json")
                     li.innerHTML = `${prod.nombre} - ${prod.precio}`
                     li.classList.add("product-item")
                     li.classList.add("nuevo-producto-rojo")
-                    precioProductos = precioProductos + parseFloat(`${prod.precio}`)
-                    numProductos ++
-                    totalPrecio.innerHTML = precioProductos
-                    totalProductos.innerHTML = numProductos
+                    estadisticas.set("total-unidades" , estadisticas.get("total-unidades")+1)
+                    estadisticas.set("total-precio" , estadisticas.get("total-precio")+prod.precio)
+                   
+                    totalPrecio.innerHTML = estadisticas.get("total-precio")
+                    totalProductos.innerHTML = estadisticas.get("total-unidades")
                     listaProductos.appendChild(li)
                     if (li.previousElementSibling !== null) {
                         
                         li.previousElementSibling.classList.remove("nuevo-producto-rojo")
                     }
-                    li.addEventListener("click" , (e)=>{
-                        console.log(e.target)
+                    li.addEventListener("dblclick" , (e)=>{
+                        estadisticas.set("total-unidades" , estadisticas.get("total-unidades")-1)
+                        estadisticas.set("total-precio" , estadisticas.get("total-precio")-prod.precio)
+                   
+                    totalPrecio.innerHTML = estadisticas.get("total-precio")
+                    totalProductos.innerHTML = estadisticas.get("total-unidades")
                         e.target.remove()
                     })
                     
