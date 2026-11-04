@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen DWEC - Gestión de Inventario</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; padding: 30px; max-width: 700px; margin: 0 auto; }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 20px; font-size: 1.8rem; }
+        .caja { background: #ffffff; padding: 20px; border-radius: 8px; border: 3px solid #e0e0e0; margin-bottom: 20px; transition: border-color 0.3s ease; }
+        .caja h3 { color: #2c3e50; margin-bottom: 12px; border-bottom: 2px solid #ecf0f1; padding-bottom: 6px; }
+        #formProducto label { display: block; font-weight: 600; margin-top: 10px; margin-bottom: 4px; color: #34495e; }
+        #formProducto input[type="text"] { width: 100%; padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; margin-bottom: 12px; }
+        #formProducto button { background-color: #3498db; color: white; border: none; padding: 10px 20px; font-size: 1rem; font-weight: 600; border-radius: 4px; cursor: pointer; width: 100%; }
+        #formProducto button:hover { background-color: #2980b9; }
+        #infoFecha { font-style: italic; color: #7f8c8d; margin-bottom: 10px; }
+        #cuentaAtras { background-color: #e74c3c; color: white; text-align: center; padding: 15px; border-radius: 8px; font-size: 1.3rem; font-weight: bold; }
+    </style>
+
+    <script src="examen1.js" defer></script>
+</head>
+<body>
+
+    <h1>Gestión de Inventario y Control de Sesión</h1>
+
+    <!-- FORMULARIO DE REGISTRO DE PRODUCTOS -->
+    <form id="formProducto" class="caja">
+        <h3>Registrar Nuevo Producto</h3>
+        <label for="nombreProd">Nombre del Producto:</label>
+        <input type="text" id="nombreProd" placeholder="Ej: Teclado Mecánico" required>
+
+        <label for="precioProd">Precio Base (€):</label>
+        <input type="text" id="precioProd" placeholder="Ej: 49.99" required>
+
+        <button type="submit" id="btnGuardar">Añadir al Inventario</button>
+    </form>
+
+    <!-- PANEL DE RESULTADOS Y METRICAS -->
+    <div id="panelControl" class="caja">
+        <h3>Estadísticas y Registro de Datos</h3>
+        <p id="infoFecha">Fecha no emitida</p>
+        <div id="listaProductos"></div>
+        <hr style="margin: 15px 0;">
+        <div id="resumenMetricas"></div>
+    </div>
+
+    <!-- CUENTA ATRÁS Y CONTROL DE TIEMPO -->
+    <div id="cuentaAtras">Cierre de sesión en: 15 s</div>
+
+</body>
+</html>
