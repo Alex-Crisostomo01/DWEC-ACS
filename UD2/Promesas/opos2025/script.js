@@ -1,5 +1,7 @@
 let listaFrameworks = document.getElementById("framework-lista")
 let seleccionAmbito = document.getElementById("ambito")
+
+
 fetch("frameworks.json")
 .then(response =>{
     if(!response.ok){
@@ -9,9 +11,25 @@ fetch("frameworks.json")
 })
 
 .then(datos =>{
-   let arraySeleccion = seleccionAmbito.querySelectorAll("input")
-   seleccionAmbito.addEventListener("change", ()=>{
-        listaFrameworks.innerHTML = ""
+
+    seleccionAmbito.addEventListener("load",cargarPagina(datos)) 
+    
+   seleccionAmbito.addEventListener("change",  () =>{
+       cargarPagina(datos)
+   })
+   
+})
+.catch(error =>{
+    console.log("Error :" + error)
+})
+
+
+
+
+function cargarPagina(datos){
+       
+        listaFrameworks.innerHTML = ""  
+        let arraySeleccion = seleccionAmbito.querySelectorAll("input")
         arraySeleccion.forEach(elemento =>{
         datos.forEach(framework =>{
             if(elemento.value === framework.ambito && elemento.checked){
@@ -20,12 +38,8 @@ fetch("frameworks.json")
                 li.innerHTML = `${framework.framework} [${framework.lenguaje}]`
                 li.classList.add("framework-elemento")
                 listaFrameworks.appendChild(li)
+
             }
         })
     })
-   })
-  
-})
-.catch(error =>{
-    console.log("Error :" + error)
-})
+}
