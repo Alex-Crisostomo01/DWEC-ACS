@@ -1,14 +1,16 @@
-let secuenciaAcumulada = new Array()
+let arrayOriginal = new Array()
 
 for(let i = 0 ; i<8;i++){
     let numeroAleatorio = Math.floor(Math.random()*10)
-    secuenciaAcumulada.push(numeroAleatorio)
+    arrayOriginal.push(numeroAleatorio)
 }
+console.log("El array original es : ",arrayOriginal )
+
 valorAcumulado = 0
-console.log(secuenciaAcumulada)
-let secuencia = new Array()
-secuenciaAcumulada.forEach(num =>{
+
+let arrayAcumulado = new Array()
+arrayOriginal.forEach(num =>{
     valorAcumulado = valorAcumulado+num
-    secuencia.push(valorAcumulado)
+    arrayAcumulado.push(valorAcumulado)
 })
-console.log(secuencia)
+console.log("El valor acumulado es :", arrayAcumulado)

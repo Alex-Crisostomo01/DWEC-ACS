@@ -1,0 +1,32 @@
+.footer-container {
+    background-color: #0f172a; /* Azul oscuro / gris muy elegante */
+    color: #94a3b8; /* Texto en tono gris suave */
+    padding: 2.5rem 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    border-top: 1px solid #1e293b;
+    width: 100%;
+    margin-top: auto; /* Útil si usas Flexbox sticky footer */
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Efecto hover interactivo */
+.footer-links li:hover {
+    color: #38bdf8; /* Azul brillante moderno */
+    transform: translateY(-2px);
+}

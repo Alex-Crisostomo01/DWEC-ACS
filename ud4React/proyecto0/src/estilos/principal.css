@@ -1,0 +1,61 @@
+/* src/estilos/principal.css */
+
+.principal-container {
+    background-color: #0b0f19; /* Un tono ligeramente más profundo para el fondo general */
+    min-height: calc(100vh - 140px); /* Ajusta para ocupar el alto entre el menú y el footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.principal-card {
+    background-color: #0f172a; /* Mismo tono de tarjeta elegante */
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.principal-card:hover {
+    border-color: #38bdf8; /* Sutil destello azul al pasar el ratón */
+    transform: translateY(-4px);
+}
+
+.principal-title {
+    color: #f8fafc; /* Blanco suave muy legible */
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+}
+
+.principal-text {
+    color: #94a3b8; /* Gris suave coherente con los demás componentes */
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.principal-btn {
+    background-color: #0284c7; /* Azul principal llamativo */
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.2);
+}
+
+.principal-btn:hover {
+    background-color: #0ea5e9; /* Tono más claro en hover */
+    transform: translateY(-2px);
+}
