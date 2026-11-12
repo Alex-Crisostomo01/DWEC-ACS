@@ -1,0 +1,10 @@
+{
+  "peliculas": [
+    { "id": 1, "titulo": "Origen (Inception)", "duracion": 148 },
+    { "id": 2, "titulo": "Interstellar", "duracion": 169 },
+    { "id": 3, "titulo": "El Caballero Oscuro", "duracion": 152 },
+    { "id": 4, "titulo": "Matrix", "duracion": 136 },
+    { "id": 5, "titulo": "Gladiator", "duracion": 155 },
+    { "id": 6, "titulo": "Pulp Fiction", "duracion": 154 }
+  ]
+}

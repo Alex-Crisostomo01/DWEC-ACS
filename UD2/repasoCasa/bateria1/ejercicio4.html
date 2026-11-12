@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4 - Lectura y Scroll</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        #barraProgreso {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            background-color: #4caf50;
+            width: 0%;
+            z-index: 1000;
+        }
+
+        #btnVolverArriba {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            display: none;
+            cursor: pointer;
+        }
+
+        .contenido {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="ejercicio4.js" defer></script>
+</head>
+<body>
+
+    <div id="barraProgreso"></div>
+
+    <div class="contenido">
+        <h1>Artículo extenso</h1>
+        <!-- Generamos espacio de scroll -->
+        <p style="margin-bottom: 1500px;">
+            Desplaza hacia abajo para probar el cálculo del porcentaje de scroll y la visibilidad del botón flotante...
+        </p>
+        <p>Fin del contenido del artículo.</p>
+    </div>
+
+    <button id="btnVolverArriba">↑ Volver arriba</button>
+
+    <!-- Asigna aquí tu archivo JavaScript -->
+    
+</body>
+</html>

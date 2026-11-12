@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Integrador - Gestor de Tareas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .alerta-tiempo {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+        .completada {
+            text-decoration: line-through;
+            color: #888;
+        }
+    </style>
+    <script src="examen2.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <span id="relojHora">00:00:00</span>
+            <span class="alerta-tiempo">Inactividad: <span id="contador">15</span>s</span>
+        </div>
+
+        <h2>Gestor de Tareas</h2>
+
+        <form id="formTarea">
+            <input type="text" id="inputTarea" placeholder="Escribe una tarea... (Esc para limpiar)" style="width: 70%; padding: 8px;">
+            <button type="submit" id="btnAgregar" style="padding: 8px;">Agregar</button>
+        </form>
+
+        <p id="mensajeEstado" style="color: red; display: none;"></p>
+
+        <h3>Lista de Tareas</h3>
+        <ul id="listaTareas">
+            <!-- Las tareas dinámicas se añadirán aquí -->
+        </ul>
+    </div>
+
+    <!-- Archivo para tu JavaScript -->
+    
+</body>
+</html>

@@ -12,4 +12,4 @@ setInterval(()=>{
         <div style= " background-color:rgb(${rojo}, ${verde}, ${azul}) ;
         top: ${y}%;
         left: ${x}%;"></div>
-    `}},2000)
+    `}},1000)

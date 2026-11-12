@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 - Tarjeta de Producto</title>
+    <style>
+        .tarjeta {
+            width: 250px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .contenedor-imagen {
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .contenedor-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .paleta-colores {
+            margin-top: 15px;
+        }
+
+        .btn-color {
+            padding: 5px 10px;
+            margin: 0 2px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="ejercicio3.js" defer></script>
+</head>
+<body>
+
+    <div class="tarjeta">
+        <div class="contenedor-imagen">
+            <img id="imagenPrincipal" src="https://via.placeholder.com/200/0000FF/888888?text=Azul" alt="Producto">
+        </div>
+        
+        <h3>Camiseta Deportiva</h3>
+
+        <!-- Delegación de eventos en este contenedor -->
+        <div id="paletaColores" class="paleta-colores">
+            <button class="btn-color" data-src="https://via.placeholder.com/200/0000FF/888888?text=Azul">Azul</button>
+            <button class="btn-color" data-src="https://via.placeholder.com/200/FF0000/FFFFFF?text=Rojo">Rojo</button>
+            <button class="btn-color" data-src="https://via.placeholder.com/200/008000/FFFFFF?text=Verde">Verde</button>
+        </div>
+    </div>
+
+    <!-- Asigna aquí tu archivo JavaScript -->
+    
+</body>
+</html>

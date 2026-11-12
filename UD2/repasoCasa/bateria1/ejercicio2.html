@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2 - Menú Contextual</title>
+    <style>
+        #zonaTrabajo {
+            width: 100%;
+            height: 300px;
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #menuContextual {
+            position: absolute;
+            display: none;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            list-style: none;
+            margin: 0;
+            padding: 5px 0;
+            width: 150px;
+        }
+
+        #menuContextual li {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        #menuContextual li:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="zonaTrabajo">
+        <p>Haz clic derecho aquí para desplegar el menú personalizado.</p>
+    </div>
+
+    <ul id="menuContextual">
+        <li id="opcion1">Ver detalles</li>
+        <li id="opcion2">Duplicar</li>
+        <li id="opcion3">Eliminar</li>
+    </ul>
+
+    <!-- Asigna aquí tu archivo JavaScript -->
+    <script src="ejercicio2.js"></script>
+</body>
+</html>

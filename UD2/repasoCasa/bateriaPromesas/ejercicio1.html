@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Películas y Favoritos</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        h1 { color: #e50914; text-align: center; }
+        select { width: 100%; padding: 10px; margin: 10px 0; font-size: 16px; border-radius: 4px; border: 1px solid #ccc; }
+        .favorites-list { list-style: none; padding: 0; margin-top: 20px; }
+        .favorite-item { padding: 12px; margin: 8px 0; background: #e9ecef; border-radius: 4px; border-left: 5px solid #6c757d; cursor: pointer; transition: all 0.3s ease; }
+        .pelicula-destacada { background: #ffebee !important; border-left-color: #e50914 !important; color: #b71c1c; font-weight: bold; }
+        .summary { background: #343a40; color: white; padding: 15px; border-radius: 4px; margin-top: 20px; }
+    </style>
+    <script src="ejercicio1.js" defer> </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Catálogo de Streaming</h1>
+        
+        <div class="filter-section">
+            <label for="peliculaSelect">Selecciona una película:</label>
+            <select id="peliculaSelect">
+                <option value="">-- Elige una película --</option>
+            </select>
+        </div>
+        
+        <div>
+            <h3>Mis Favoritos (Haz doble clic para eliminar):</h3>
+            <ul class="favorites-list" id="favoritosList"></ul>
+        </div>
+        
+        <div class="summary">
+            <h3>Estadísticas Globales</h3>
+            <p>Total películas en favoritos: <span id="totalFavoritos">0</span></p>
+            <p>Duración total acumulada: <span id="duracionTotal">0</span> min</p>
+        </div>
+    </div>
+
+    <!-- Tu script JavaScript -->
+    
+</body>
+</html>

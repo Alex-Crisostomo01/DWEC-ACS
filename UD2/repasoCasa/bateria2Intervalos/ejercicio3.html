@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 - Código OTP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        .contenedor-otp {
+            max-width: 350px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #btnSolicitar {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        #btnSolicitar:disabled {
+            background-color: #e0e0e0;
+            cursor: not-allowed;
+        }
+
+        #mensajeEstado {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+     <script src="ejercicio3.js" defer></script>
+</head>
+<body>
+
+    <div class="contenedor-otp">
+        <h3>Autenticación en dos pasos</h3>
+        <p>Haz clic para enviar el código a tu teléfono.</p>
+
+        <button id="btnSolicitar">Enviar código OTP</button>
+
+        <!-- Elemento donde actualizarás el estado y los segundos restantes -->
+        <p id="mensajeEstado"></p>
+    </div>
+
+    
+   
+</body>
+</html>
