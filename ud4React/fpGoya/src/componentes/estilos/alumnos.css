@@ -1,0 +1,57 @@
+/* Alumnos.css */
+
+.alumnos-container {
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d3748;
+}
+
+.alumnos-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #edf2f7;
+  padding-bottom: 0.75rem;
+}
+
+.alumnos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alumno-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background: #f7fafc;
+  border-radius: 8px;
+  border-left: 4px solid #3182ce;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.alumno-item:hover {
+  background: #edf2f7;
+  transform: translateX(4px);
+}
+
+.profesor-item {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #ebf8ff;
+  border-radius: 8px;
+  border-left: 4px solid #319795;
+  font-weight: 600;
+  color: #2c7a7b;
+  text-align: center;
+}
