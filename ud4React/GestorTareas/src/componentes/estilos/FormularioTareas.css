@@ -1,0 +1,100 @@
+.titulo-formulario {
+  margin: 0 0 0.75rem;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #2e2a36;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.titulo-formulario::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  background-color: #f7c5b0;
+  border: 1.5px solid #2e2a36;
+  display: inline-block;
+}
+
+.formulario-tarea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  padding: 1rem;
+  background-color: #fff9ee;
+  border: 1.5px solid #2e2a36;
+  border-radius: 18px 8px 18px 8px;
+  box-shadow: 4px 4px 0px #e7e1fb;
+}
+
+.input-tarea {
+  flex: 1 1 220px;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  color: #2e2a36;
+  background-color: #ffffff;
+  border: 1.5px solid #2e2a36;
+  border-radius: 12px;
+  outline: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+}
+
+.input-tarea::placeholder {
+  color: #8b8596;
+  font-style: italic;
+}
+
+.input-tarea:focus {
+  background-color: #f3faf6;
+  box-shadow: 3px 3px 0px #cbebd9;
+  transform: translate(-1px, -1px);
+}
+
+.boton-agregar {
+  padding: 0.7rem 1.35rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #2e2a36;
+  background-color: #cbebd9;
+  border: 1.5px solid #2e2a36;
+  border-radius: 12px;
+  box-shadow: 3px 3px 0px #2e2a36;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.2s ease;
+}
+
+.boton-agregar:hover:not(:disabled) {
+  background-color: #fad7c3;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #2e2a36;
+}
+
+.boton-agregar:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #2e2a36;
+}
+
+.boton-agregar:disabled {
+  background-color: #f1efe9;
+  color: #9e98a8;
+  border-color: #c8c3d1;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.debug-texto {
+  margin-top: 0.85rem;
+  padding: 0.45rem 0.85rem;
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  color: #3a3447;
+  background-color: #e7e1fb;
+  border: 1px dashed #6f668a;
+  border-radius: 999px;
+}

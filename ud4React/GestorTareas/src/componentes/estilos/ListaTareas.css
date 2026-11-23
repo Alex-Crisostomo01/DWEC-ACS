@@ -1,0 +1,116 @@
+.titulo-lista {
+  margin: 1.5rem 0 0.75rem;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #2e2a36;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.titulo-lista::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  background-color: #cbebd9;
+  border: 1.5px solid #2e2a36;
+  display: inline-block;
+}
+
+.lista-tareas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.tarea-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background-color: #fff9ee;
+  border: 1.5px solid #2e2a36;
+  border-radius: 8px 18px 8px 18px;
+  box-shadow: 3px 3px 0px #fad7c3;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+}
+
+.tarea-item:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #e7e1fb;
+}
+
+/* Checkbox pastel personalizado */
+.tarea-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  flex-shrink: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0;
+  background-color: #ffffff;
+  border: 1.5px solid #2e2a36;
+  border-radius: 5px;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: background-color 0.15s ease, transform 0.12s ease;
+}
+
+.tarea-item input[type="checkbox"]:checked {
+  background-color: #cbebd9;
+}
+
+.tarea-item input[type="checkbox"]:checked::before {
+  content: "✓";
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2e2a36;
+  line-height: 1;
+}
+
+.tarea-texto {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #2e2a36;
+  word-break: break-word;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+/* Botón/span de eliminar ("x") */
+.tarea-item span[id] {
+  flex-shrink: 0;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2e2a36;
+  background-color: #fad7c3;
+  border: 1.5px solid #2e2a36;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0px #2e2a36;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.15s ease;
+}
+
+.tarea-item span[id]:hover {
+  background-color: #e7e1fb;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #2e2a36;
+}
+
+.tarea-item span[id]:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #2e2a36;
+}
