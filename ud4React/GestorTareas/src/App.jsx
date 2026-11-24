@@ -1,8 +1,12 @@
 import { useState } from "react";
 import "./App.css";
-import ListaTareas from "./componentes/ListaTareas";
-import FormularioTarea from "./componentes/FormularioTarea";
-import Contador from "./componentes/Contador";
+
+import Contacto from "./componentes/Contacto";
+import Menu from "./componentes/Menu";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Inicio from "./componentes/Inicio";
+import SobreMi from "./componentes/SobreMi";
+import Tarea from "./componentes/Tarea";
 // import ListaTareas from './componente/ListaTareas';
 
 function App() {
@@ -42,16 +46,24 @@ function App() {
     ))
   }
  return (
-    <div className="app-gestor">
-      <h1 className="titulo-app">Gestor de Tareas</h1>
-      <FormularioTarea agregarTarea={agregarTarea} />
-      <ListaTareas
-        tareas={tareas}
-        eliminarTarea={eliminarTarea}
-        toggleCompletada={toggleCompletada}
-      />
-      {/* <Contador />  */}
-    </div>
+
+
+  <>
+     
+      <BrowserRouter>
+      <Menu/>
+        <Routes>
+
+            <Route path="/" element={<Inicio  tareas={tareas} agregarTarea={agregarTarea} eliminarTarea={eliminarTarea} toggleCompletada={toggleCompletada}/> }/>
+            <Route path="/sobre-mi" element={<SobreMi/>}/>
+            <Route path="/contacto" element={<Contacto/>}/>
+            <Route path="/tarea/:id" element={<Tarea tareas ={tareas}/>}/>
+
+        </Routes>
+      
+      
+      </BrowserRouter>
+  </>
   );
 }
 

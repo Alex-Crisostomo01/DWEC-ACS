@@ -1,0 +1,224 @@
+:root {
+  --fondo: #f5f0e8;
+  --papel: #fdf8ee;
+  --tinta: #2b2833;
+  --menta: #cfe8d8;
+  --melocoton: #f5d0bc;
+  --lavanda: #e6dff7;
+}
+
+body {
+  margin: 0;
+  background-color: var(--fondo);
+  background-image: radial-gradient(#d9d2c3 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  color: var(--tinta);
+  font-family: "Ubuntu", "Segoe UI", sans-serif;
+}
+
+/* ---------- Tarjeta principal ---------- */
+.pagina {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem 3rem;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 620px;
+  box-sizing: border-box;
+  padding: 2rem;
+  background: var(--papel);
+  border: 3px solid var(--tinta);
+  border-radius: 32px;
+  box-shadow: 12px 12px 0 var(--tinta);
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px dashed var(--tinta);
+}
+
+.cabecera h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.4rem;
+  letter-spacing: -1px;
+}
+
+.badge {
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  background: var(--menta);
+  border: 2px solid var(--tinta);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ---------- Títulos de sección ---------- */
+.seccion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 1.8rem 0 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+}
+
+.punto {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--tinta);
+  border-radius: 50%;
+}
+.punto.menta { background: var(--menta); }
+.punto.melocoton { background: var(--melocoton); }
+.punto.lavanda { background: var(--lavanda); }
+
+/* ---------- Cajas y elementos ---------- */
+.caja {
+  padding: 1.2rem 1.5rem;
+  background: #fff;
+  border: 3px solid var(--tinta);
+  border-radius: 28px;
+  box-shadow: 6px 6px 0 var(--lavanda);
+}
+
+.caja p { margin: 0; line-height: 1.6; }
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--papel);
+  border: 3px solid var(--tinta);
+  border-radius: 28px;
+  box-shadow: 6px 6px 0 var(--melocoton);
+}
+
+/* ---------- Etiquetas de tecnologías ---------- */
+.etiquetas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.etiquetas li {
+  padding: 0.4rem 1rem;
+  background: var(--lavanda);
+  border: 2px dashed var(--tinta);
+  border-radius: 999px;
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+}
+
+/* ---------- Formulario ---------- */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 0.8rem 1.1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fff;
+  border: 2px solid var(--tinta);
+  border-radius: 20px;
+  resize: vertical;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+  font-style: italic;
+  color: #8a8594;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  background: var(--papel);
+  box-shadow: 4px 4px 0 var(--menta);
+}
+
+.boton {
+  align-self: flex-end;
+  padding: 0.7rem 1.6rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  background: var(--melocoton);
+  color: var(--tinta);
+  border: 2px solid var(--tinta);
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 var(--tinta);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.boton:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--tinta);
+}
+
+.boton:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--tinta);
+}
+
+.aviso {
+  margin: 1.2rem 0 0;
+  padding: 0.8rem;
+  text-align: center;
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  background: var(--menta);
+  border: 2px dashed var(--tinta);
+  border-radius: 20px;
+}
+
+/* ---------- Menú ---------- */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 1.2rem 1rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  color: var(--tinta);
+  text-decoration: none;
+  font-weight: 700;
+  background: var(--papel);
+  border: 2px solid var(--tinta);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--tinta);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.menu a:hover {
+  background: var(--menta);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--tinta);
+}
