@@ -1,0 +1,16 @@
+{
+    "aficiones" : [
+        {"id":1 , "nombre": "Baloncesto" , "descripcion": "Jugar al baloncesto por las tardes" , "imagen" :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIXm7wSuit7mn1U0MCNmz7OjaicstZ_Ks-x6dBE1TcBVzuXTScow2W4I4f&s=10"},
+        {"id" :2 , "nombre": "Estudiar" , "descripcion": "Suelo estudiar los martes y jueves" , "imagen" :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE-HCtO9bFGXnCJtRUhkImrHaMURxhmESnt9BQLEk3rQ&s=10"},
+        {"id" :3 , "nombre": "Programar", "descripcion": "Programo para mejorar mis estudios en tiempos libres" , "imagen" :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJZiuYu_8oVcEi5RRc7nH2GsYTJbKC86P1m-XalvwZq1ClUeMWpMI3rn1l&s=10"}
+    ] ,
+    "tecnologias" : [
+        {"id" : 1 , "nombre": "HTML"},
+        {"id" : 2 , "nombre": "CSS"}, 
+        {"id" : 3 , "nombre": "JavaScript"}, 
+        {"id" : 4 , "nombre": "React"}, 
+        {"id" : 5 , "nombre": "Java"}, 
+        {"id" : 6 , "nombre": "SpringBoot"}, 
+        {"id" : 7 , "nombre": "Git"} 
+    ]
+}

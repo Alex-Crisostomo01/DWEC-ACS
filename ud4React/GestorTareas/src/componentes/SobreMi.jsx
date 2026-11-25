@@ -1,7 +1,33 @@
+import { useEffect, useState } from 'react';
+import ServicioInformacion from '../servicios/ServicioInformacion';
 import './estilos/paginas.css'
 
 
 function SobreMi(){
+    
+    const  [aficiones , setAficiones] = useState([])
+    const [tecnologias , setTecnologias] = useState([])
+
+
+    useEffect(()=>{
+         ServicioInformacion.getAllAficiones()
+        .then((response)=>{
+            setAficiones(response.data)
+        })
+        .catch(()=>{
+            console.log("Error HTTP")
+        })
+          ServicioInformacion.getAllTecnologias()
+        .then((response)=>{
+            setTecnologias(response.data)
+        })
+        .catch(()=>{
+            console.log("Error HTTP")
+        })
+    },[])
+
+   
+    
     return(
 
         <>
@@ -11,7 +37,7 @@ function SobreMi(){
             <section className="tarjeta">
                 <img
                 className="avatar"
-                src="https://via.placeholder.com/150"
+                src="/public/img/foto.png"
                 alt="Foto de perfil"
                 />
                 <h1>Sobre mí</h1>
@@ -34,9 +60,24 @@ function SobreMi(){
                 <li>Git</li>
                 </ul>
 
-                <h2>Aficiones</h2>
-                <p>Videojuegos, programar proyectos personales y crear contenido.</p>
+              <section className="aficiones-section">
+                <h2 className="aficiones-titulo">Aficiones</h2>
+                <ul className="aficiones-lista">
+                    {aficiones.map((aficion) => (
+                    <li key={aficion.id} className="aficion-card">
+                        <div className="aficion-img-wrapper">
+                        <img src={aficion.imagen} alt={aficion.nombre} />
+                        </div>
+                        <span className="aficion-nombre">{aficion.nombre}</span>
+                    </li>
+                    ))}
+                </ul>
             </section>
+            </section>
+            
+            <div>
+
+            </div>
             </main>
         </>
         
